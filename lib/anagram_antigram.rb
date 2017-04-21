@@ -7,8 +7,10 @@ class String
     second_word = word2.split("").sort()
     if (second_word & first_word & vowels).empty?() == false
       if second_word == first_word
-        "This word is an anagram!"
+        "These words are anagrams!"
       end
+    elsif (second_word & first_word).empty? == true
+      "These words have no letters in common and they are what you call antigrams!"
     else
       "Please enter actual words!"
     end

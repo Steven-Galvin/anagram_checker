@@ -2,12 +2,12 @@ require('rspec')
 require('anagram_antigram')
 
 describe('String#anagram_checker') do
-  it('takes two inputted words and confirms they are anagrams') do |inputted_words|
-    expect("car".anagram_checker?("arc")).to(eq("This word is an anagram!"))
+  it('takes two inputted words and confirms they are anagrams') do
+    expect("car".anagram_checker?("arc")).to(eq("These words are anagrams!"))
   end
 
   it('confirms words are anagrams regardless of case') do
-    expect("tAke".anagram_checker?("KaTe")).to(eq("This word is an anagram!"))
+    expect("tAke".anagram_checker?("KaTe")).to(eq("These words are anagrams!"))
   end
 
   it('checks and confirms palindromes') do
@@ -16,5 +16,9 @@ describe('String#anagram_checker') do
 
   it('checks and confirms inputted words are actual words') do
     expect("tkw".anagram_checker?("kwt")).to(eq("Please enter actual words!"))
+  end
+
+  it('checks to see if words are antigrams if they are not anagrams') do
+    expect("hello".anagram_checker?("Timmy")).to(eq("These words have no letters in common and they are what you call antigrams!"))
   end
 end
