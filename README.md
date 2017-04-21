@@ -43,7 +43,7 @@ Setup is easy. All you need to do is:
 * Navigate to the folder in your terminal and run sinatra
 * Go to your browser and enter localhost:4567
 
-If you just want to view the app, you can visit 
+If you just want to view the app, you can visit https://gentle-fortress-28939.herokuapp.com/
 
 ## Known Bugs
 

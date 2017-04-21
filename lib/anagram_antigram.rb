@@ -1,7 +1,7 @@
 class String
   define_method(:anagram_checker?) do |word2|
     vowels = ["a", "e", "i", "o", "u", "y"]
-    self.downcase!()
+    downcase!()
     first_word = self.gsub(/[^a-z]/, '').split("").sort()
     word2.downcase!()
     second_word = word2.gsub(/[^a-z]/, '').split("").sort()
@@ -20,8 +20,8 @@ class String
 
   define_method(:palindrome_checker?) do
     reverse_self = self.downcase().gsub(/[^a-z]/, '').reverse().split("")
-    self1 = self.downcase().gsub(/[^a-z]/, '').split("")
-    if result = self1.join() == reverse_self.join()
+    new_self = self.downcase().gsub(/[^a-z]/, '').split("")
+    if new_self.join() == reverse_self.join()
       "This is a palindrome!"
     else
       "This is not a palindrome!"
