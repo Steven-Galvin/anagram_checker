@@ -19,9 +19,12 @@ class String
   end
 
   define_method(:palindrome_checker?) do
-    reverse_self = self.reverse()
-    if result = self.to_s() == reverse_self.to_s()
-      "This word is a palindrome!"
+    reverse_self = self.downcase().gsub(/[^a-z]/, '').reverse().split("")
+    self1 = self.downcase().gsub(/[^a-z]/, '').split("")
+    if result = self1.join() == reverse_self.join()
+      "This is a palindrome!"
+    else
+      "This is not a palindrome!"
     end
   end
 end

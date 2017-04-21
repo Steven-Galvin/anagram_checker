@@ -1,17 +1,20 @@
-<h1>Anagram or Antigram?</h1>
-<h3>Enter two words to compare them and find out if they are either an anagram or antigram. If they're anagrams, it'll also tell you if they are palindromes!</h3>
+<h1>Anagram, Antigram or Neither?</h1>
+<h3>Enter two words to compare them and find out if they are either an anagram, antigram or neither.</h3>
 <form class="" action="/anagram_result" method="get">
   <div class="form-group">
-    <label for="word1">Enter first word:</label>
+    <label for="word1">Enter the first word:</label>
     <input id="word1" name="word1" class="form-control" type="text">
-    <label for="word2">Enter second word:</label>
+    <label for="word2">Enter the second word:</label>
     <input id="word2" name="word2" class="form-control" type="text">
   </div>
   <button type="submit" class="btn btn-info">Compare!</button>
 </form>
+<br>
+<h1>Is this a palindrome?</h1>
+<h3>A palindrome is a word or phrase that is spelled the same forwards and backwards. Enter a word or phrase below to check if it is a palindrome!</h3>
 <form class="" action="/palindrome_result" method="get">
   <div class="form-group">
-    <label for="palindrome_word">Enter a word to check if it's a palindrome:</label>
+    <label for="palindrome_word">Enter a word:</label>
     <input id="palindrome_word" name="palindrome_word" class="form-control" type="text">
   </div>
   <button type="submit" class="btn btn-success">Check!</button>

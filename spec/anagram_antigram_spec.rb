@@ -11,7 +11,7 @@ describe('String#anagram_checker') do
   end
 
   it('checks and confirms palindromes') do
-    expect("racecar".palindrome_checker?()).to(eq("This word is a palindrome!"))
+    expect("racecar".palindrome_checker?()).to(eq("This is a palindrome!"))
   end
 
   it('checks and confirms inputted words are actual words') do

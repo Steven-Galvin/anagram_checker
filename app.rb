@@ -15,6 +15,6 @@ get('/anagram_result') do
 end
 
 get('/palindrome_result') do
-  @palindrome_result = params.fetch('palindome_word').palindrome_checker?()
+  @palindrome_result = params.fetch('palindrome_word').palindrome_checker?()
   erb(:palindrome_result)
 end

@@ -11,4 +11,11 @@ describe('the anagram path', {:type => :feature}) do
     click_button('Compare')
     expect(page).to have_content("These words are anagrams!")
   end
+
+  it('proccesses the user entry and returns whether the word is a palindrome') do
+    visit('/')
+    fill_in('palindrome_word', :with => 'Red rum, sir, is murder!')
+    click_button('Check')
+    expect(page).to have_content("This is a palindrome!")
+  end
 end
