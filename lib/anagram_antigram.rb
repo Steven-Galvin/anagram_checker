@@ -6,7 +6,9 @@ class String
     word2.downcase!()
     second_word = word2.gsub(/[^a-z]/, '').split("").sort()
     if (second_word & first_word & vowels).empty?() == false
-      if second_word == first_word
+      if first_word != second_word
+        "These words are not anagrams!"
+      elsif second_word == first_word
         "These words are anagrams!"
       end
     elsif (second_word & first_word).empty? == true

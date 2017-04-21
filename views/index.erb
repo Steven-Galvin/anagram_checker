@@ -1,11 +1,18 @@
 <h1>Anagram or Antigram?</h1>
 <h3>Enter two words to compare them and find out if they are either an anagram or antigram. If they're anagrams, it'll also tell you if they are palindromes!</h3>
-<form class="" action="/result" method="get">
+<form class="" action="/anagram_result" method="get">
   <div class="form-group">
     <label for="word1">Enter first word:</label>
-    <input id="word1" name="word1" class="form-control" type="number">
+    <input id="word1" name="word1" class="form-control" type="text">
     <label for="word2">Enter second word:</label>
-    <input id="word2" name="word2" class="form-control" type="number">
+    <input id="word2" name="word2" class="form-control" type="text">
   </div>
   <button type="submit" class="btn btn-info">Compare!</button>
+</form>
+<form class="" action="/palindrome_result" method="get">
+  <div class="form-group">
+    <label for="palindrome_word">Enter a word to check if it's a palindrome:</label>
+    <input id="palindrome_word" name="palindrome_word" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-success">Check!</button>
 </form>

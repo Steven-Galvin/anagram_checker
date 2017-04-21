@@ -7,6 +7,14 @@ get('/') do
   erb(:index)
 end
 
-get('/result') do
-  erb(:result)
+get('/anagram_result') do
+  word1 = params.fetch('word1')
+  word2 = params.fetch('word2')
+  @anagram_result = word1.anagram_checker?(word2)
+  erb(:anagram_result)
+end
+
+get('/palindrome_result') do
+  @palindrome_result = params.fetch('palindome_word').palindrome_checker?()
+  erb(:palindrome_result)
 end
