@@ -21,4 +21,8 @@ describe('String#anagram_checker') do
   it('checks to see if words are antigrams if they are not anagrams') do
     expect("hello".anagram_checker?("Timmy")).to(eq("These words have no letters in common and they are what you call antigrams!"))
   end
+
+  it('checks to see if multiple words are anagrams, disregarding spaces and puncuation') do
+    expect("Doctor Who?".anagram_checker?("Torchwood!   ")).to(eq("These words are anagrams!"))
+  end
 end
