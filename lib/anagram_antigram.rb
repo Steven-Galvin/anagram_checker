@@ -1,11 +1,16 @@
 class String
   define_method(:anagram_checker?) do |word2|
+    vowels = ["a", "e", "i", "o", "u", "y"]
     self.downcase!()
     first_word = self.split("").sort()
     word2.downcase!()
     second_word = word2.split("").sort()
-    if second_word == first_word
-      "This word is an anagram!"
+    if (second_word & first_word & vowels).empty?() == false
+      if second_word == first_word
+        "This word is an anagram!"
+      end
+    else
+      "Please enter actual words!"
     end
   end
 
